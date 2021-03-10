@@ -4,7 +4,7 @@
   "description": "practice data structure",
   "main": "index.js",
   "scripts": {
-    "test": "jest src/list/arrayList.test.js"
+    "test": "jest src/list/singlyLinkedList.test.js"
   },
   "repository": {
     "type": "git",
