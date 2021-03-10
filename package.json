@@ -1,0 +1,23 @@
+{
+  "name": "data-structure",
+  "version": "1.0.0",
+  "description": "practice data structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest src/list/arrayList.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannylee9212/data-structure.git"
+  },
+  "type": "module",
+  "author": "dannylee9212",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dannylee9212/data-structure/issues"
+  },
+  "homepage": "https://github.com/dannylee9212/data-structure#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
