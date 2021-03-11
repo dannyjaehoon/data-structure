@@ -19,6 +19,7 @@ class SinglyLinkedList {
   prepend(value) {
     if (this.isEmpty()) {
       this.head = new Node(value, null);
+      this.size += 1;
       return;
     }
     let current = this.head;
@@ -33,6 +34,7 @@ class SinglyLinkedList {
   append(value) {
     if (this.isEmpty()) {
       this.head = new Node(value, null);
+      this.size += 1;
       return;
     }
 

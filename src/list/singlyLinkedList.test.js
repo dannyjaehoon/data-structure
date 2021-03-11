@@ -138,7 +138,7 @@ describe('test singlyLinkedList functionalities', () => {
     singlyLinkedList.append(5);
     singlyLinkedList.insert(5, 9);
 
-    expect(singlyLinkedList.print()).toBe('1251259');
+    expect(singlyLinkedList.print()).toBe('1251295');
   });
 });
 
