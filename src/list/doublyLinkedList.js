@@ -20,11 +20,12 @@ class DoublyLinkedList {
   prepend(value) {
     if (this.head === null) {
       this.head = new Node(value, null, null);
+      this.tail = this.head;
       this.size += 1;
       return;
     }
-
     let newNode = new Node(value, null, this.head);
+    this.head.prev = newNode;
     this.head = newNode;
     this.size += 1;
   }
@@ -113,16 +114,27 @@ class DoublyLinkedList {
   print() {
     let result = '';
     let current = this.head;
-
     while (current.next !== null) {
+      console.log(current);
       result += current.value;
       current = current.next;
     }
+    console.log(current);
     result += current.value;
     return result;
   }
 
-  printInv() {}
+  printInv() {
+    let result = '';
+    let current = this.tail;
+
+    while (current.prev !== null) {
+      result += current.value;
+      current = current.prev;
+    }
+    result += current.value;
+    return result;
+  }
 }
 
 module.exports = DoublyLinkedList;

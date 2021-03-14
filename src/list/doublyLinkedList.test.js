@@ -110,7 +110,7 @@ describe('test doublyLinkedList functionalities', () => {
     doublyLinkedList.insert(0, 1);
     doublyLinkedList.insert(6, 1);
 
-    expect(doublyLinkedList.print()).toBe('12918918');
+    expect(doublyLinkedList.printInv()).toBe('81981921');
   });
 });
 
@@ -125,5 +125,43 @@ describe('test doublyLinkedList functionalities', () => {
     doublyLinkedList.remove(2);
 
     expect(doublyLinkedList.print()).toBe('2998');
+  });
+});
+
+// printInv;
+describe('test doublyLinkedList functionalities', () => {
+  test('test printInv function', () => {
+    doublyLinkedList.prepend(1);
+    doublyLinkedList.prepend(2);
+    doublyLinkedList.prepend(3);
+    doublyLinkedList.prepend(4);
+
+    expect(doublyLinkedList.printInv()).toBe('1234');
+  });
+});
+
+//printInv
+describe('test doublyLinkedList functionalities', () => {
+  test('test printInv function', () => {
+    doublyLinkedList.append(2);
+    doublyLinkedList.append(9);
+    doublyLinkedList.append(8);
+    doublyLinkedList.append(9);
+    doublyLinkedList.append(8);
+
+    expect(doublyLinkedList.printInv()).toBe('89892');
+  });
+});
+
+describe('test doublyLinkedList functionalities', () => {
+  test('test remove function', () => {
+    doublyLinkedList.append(2);
+    doublyLinkedList.append(9);
+    doublyLinkedList.append(8);
+    doublyLinkedList.append(9);
+    doublyLinkedList.append(8);
+    doublyLinkedList.remove(2);
+
+    expect(doublyLinkedList.printInv()).toBe('8992');
   });
 });
