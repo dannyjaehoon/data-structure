@@ -36,22 +36,15 @@ class DoublyLinkedList {
       this.tail = this.head;
       this.size += 1;
       return;
-    }
-    if (this.size === 1) {
-      this.head.next = new Node(value, this.head, null);
-      this.tail = this.head.next;
+    } else {
+      this.tail.next = new Node(value, this.tail, null);
+      this.tail = this.tail.next;
       this.size += 1;
-      return;
     }
-    let lastNode = this.tail;
-    lastNode.next = new Node(value, lastNode, null);
-    this.tail = lastNode.next;
-    this.size += 1;
   }
 
   setHead(index) {
     let current = this.head;
-
     for (let i = 0; i < index; i++) {
       current = current.next;
     }
@@ -76,10 +69,16 @@ class DoublyLinkedList {
       this.size += 1;
       return;
     }
+    if (this.size === index + 1) {
+      this.append(value);
+      this.size += 1;
+      return;
+    }
     let current = this.head;
     for (let i = 0; i < index; i++) {
       current = current.next;
     }
+
     const newNode = new Node(value, current.prev, current);
     current.prev.next = newNode;
     current.prev = newNode;

@@ -4,7 +4,7 @@
   "description": "practice data structure",
   "main": "index.js",
   "scripts": {
-    "test": "jest src/list/doublyLinkedList.test.js"
+    "test": "jest src/queue/linkedQueue.test.js"
   },
   "repository": {
     "type": "git",
